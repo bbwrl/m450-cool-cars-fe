@@ -12,9 +12,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>My Header</div>
+        <header className="siteHeader">
+          <div className="container">
+            <a href="/" className="brand">
+              <div className="logo" aria-hidden></div>
+              <span className="siteTitle">Cool Cars</span>
+            </a>
+          </div>
+        </header>
+
         {children}
-        <div>My Footer</div>
+
+        <footer className="siteFooter">
+          <div className="container">© {new Date().getFullYear()} Cool Cars</div>
+        </footer>
       </body>
     </html>
   );
